@@ -10,17 +10,28 @@ export default {
       labels: [],
       datasets: [
         {
-          label: 'PSI Readings-Singapore',
+          label: 'US Covid Deaths',
           data: [],
           //backgroundColor:['aqua','lightgreen','red','orange'],
           borderWidth: 0.5,
           borderColor: 'orange',
           backgroundColor: 'orange',
           fill: false
+        },
+        {
+          label: 'Total US Covid Deaths',
+          data: [],
+          borderColor: 'red',
+          backgroundColor: 'red',
+          fill: false
         }
       ]
     },
     options: {
+      title: {
+        display: true,
+        text: 'US Covid Deaths'
+      },
       scales: {
         yAxes: [
           {
@@ -34,13 +45,14 @@ export default {
   }),
   methods: {
     fetchData: function() {
-      axios.get('https://api.data.gov.sg/v1/environment/psi').then(response => {
-        this.results = response.data.items[0].readings.psi_twenty_four_hourly;
-        // console.log(response.data);
-        // console.log(this.results);
+      axios.get('http://covid19.soficoop.com/country/us').then(response => {
+        this.results = response.data.snapshots;
+        console.log(response.data);
+        console.log(this.results);
         for (let key in this.results) {
-          this.chartdata.datasets[0].data.push(this.results[key]);
-          this.chartdata.labels.push(key + '');
+          this.chartdata.datasets[0].data.push(this.results[key].todayDeaths);
+          this.chartdata.labels.push(this.results[key].timestamp + '');
+          this.chartdata.datasets[1].data.push(this.results[key].deaths);
         }
         this.renderChart(this.chartdata, this.options);
       });
