@@ -47,8 +47,8 @@ export default {
     fetchData: function() {
       axios.get('http://covid19.soficoop.com/country/us').then(response => {
         this.results = response.data.snapshots;
-        console.log(response.data);
-        console.log(this.results);
+        // console.log(response.data);
+        // console.log(this.results);
         for (let key in this.results) {
           this.chartdata.datasets[0].data.push(this.results[key].todayDeaths);
           this.chartdata.labels.push(this.results[key].timestamp + '');

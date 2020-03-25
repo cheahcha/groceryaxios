@@ -15,6 +15,9 @@
     <div id="chart">
       <coviddeaths></coviddeaths>
     </div>
+    <div id="chart">
+      <mrt></mrt>
+    </div>
   </div>
 </template>
 
@@ -24,6 +27,7 @@ import PSIIndex from "../PSIIndex.js";
 import axios from "../axios2";
 import covid from "../USCovid";
 import coviddeaths from "../CovidDeaths";
+import mrt from "../Transport";
 
 export default {
   components: {
@@ -31,7 +35,8 @@ export default {
     PSIIndex,
     axios,
     covid,
-    coviddeaths
+    coviddeaths,
+    mrt
   }
 };
 </script>>
