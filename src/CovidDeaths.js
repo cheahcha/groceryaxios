@@ -45,7 +45,7 @@ export default {
         xAxes: [
           {
             ticks: {
-              max: '2020-03-18T20:00:00.199Z'
+              min: '2020-03-25T01:00:00.156Z'
             }
           }
         ]
