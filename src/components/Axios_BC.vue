@@ -9,7 +9,7 @@
     <div id="chart">
       <axios></axios>
     </div>
-    <div id="chart">
+    <div id="chart" style="position: relative; height 40vh;width:80vw">
       <covid></covid>
     </div>
     <div id="chart">
@@ -24,10 +24,10 @@
 <script>
 import axiosExample from "../axiosExample.js";
 import PSIIndex from "../PSIIndex.js";
-import axios from "../axios2";
-import covid from "../USCovid";
-import coviddeaths from "../CovidDeaths";
-import mrt from "../Transport";
+import axios from "../axios2.js";
+import covid from "../USCovid.js";
+import coviddeaths from "../CovidDeaths.js";
+import mrt from "../Transport.js";
 
 export default {
   components: {

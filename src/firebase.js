@@ -1,14 +1,14 @@
 import firebase from 'firebase';
 
-var firebaseConfig = {
-  apiKey: 'AIzaSyB5B5CxnpV900fU0E-r8YO5jHqTvyE6L-Q',
-  authDomain: 'groceryaxios-78d4b.firebaseapp.com',
-  databaseURL: 'https://groceryaxios-78d4b.firebaseio.com',
-  projectId: 'groceryaxios-78d4b',
-  storageBucket: 'groceryaxios-78d4b.appspot.com',
-  messagingSenderId: '590950854977',
-  appId: '1:590950854977:web:bdb2c725eec3d48b1ab1c0',
-  measurementId: 'G-RLE34PG8XP'
+const firebaseConfig = {
+  apiKey: 'AIzaSyDBLi7-MC68_nuJFm76vUgxkwM6r00njAk',
+  authDomain: 'groceryaxios-439e8.firebaseapp.com',
+  databaseURL: 'https://groceryaxios-439e8.firebaseio.com',
+  projectId: 'groceryaxios-439e8',
+  storageBucket: 'groceryaxios-439e8.appspot.com',
+  messagingSenderId: '98670865142',
+  appId: '1:98670865142:web:6f1d877b6b475771d99ad7',
+  measurementId: 'G-NSSZMX4QD1'
 };
 
 firebase.initializeApp(firebaseConfig);

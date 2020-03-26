@@ -45,7 +45,7 @@ export default {
   }),
   methods: {
     fetchData: function() {
-      axios.get('http://covid19.soficoop.com/country/us').then(response => {
+      axios.get('https://covid19.soficoop.com/country/us').then(response => {
         this.results = response.data.snapshots;
         // console.log(response.data);
         // console.log(this.results);
@@ -58,7 +58,7 @@ export default {
       });
     }
   },
-  mounted() {
+  created() {
     // console.log('Do I come here');
     this.fetchData();
   }
