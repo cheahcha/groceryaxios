@@ -9,7 +9,7 @@
     <div id="chart">
       <axios></axios>
     </div>
-    <div id="chart" style="position: relative; height 40vh;width:80vw">
+    <div id="chart">
       <covid></covid>
     </div>
     <div id="chart">
